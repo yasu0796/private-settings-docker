@@ -1,4 +1,4 @@
-FROM fedora:38
+FROM fedora:39
 RUN dnf upgrade -y && dnf -y install git glibc-langpack-ja
 RUN curl -fsSL https://code-server.dev/install.sh | sh
 RUN code-server --locale ja \

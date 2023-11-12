@@ -9,7 +9,7 @@
 AMD64, ARM64 are supported.
 
 - Debian 11, 12
-- Fedora (Latest : 38)
+- Fedora (Latest : 39)
 - Ubuntu 22.04
 
 ## Application
