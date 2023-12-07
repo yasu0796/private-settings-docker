@@ -1,0 +1,94 @@
+---
+services:
+ search:
+   image: splunk/splunk:latest
+   platform: linux/amd64
+   hostname: search
+   environment:
+     - TZ=Asia/Tokyo
+     - SPLUNK_START_ARGS=--accept-license
+     - SPLUNK_PASSWORD=TestPass123#
+     - SPLUNK_DEPLOYMENT_SERVER=deploy
+     - SPLUNK_CLUSTER_MASTER_URL=cmaster
+     - SPLUNK_IDXC_PASS4SYMMKEY=SYMMKEY123#
+     - SPLUNK_ROLE=splunk_search_head
+   ports:
+     - 8000:8000  # Web
+     - 8089:8089  # REST API
+ cmaster:
+   image: splunk/splunk:latest
+   platform: linux/amd64
+   hostname: cmaster
+   environment:
+     - TZ=Asia/Tokyo
+     - SPLUNK_START_ARGS=--accept-license
+     - SPLUNK_PASSWORD=TestPass123#
+     - SPLUNK_DEPLOYMENT_SERVER=deploy
+     - SPLUNK_IDXC_SEARCH_FACTOR=2
+     - SPLUNK_IDXC_REPLICATION_FACTOR=3
+     - SPLUNK_CLUSTER_MASTER_URL=cmaster
+     - SPLUNK_IDXC_PASS4SYMMKEY=SYMMKEY123#
+     - SPLUNK_ROLE=splunk_cluster_master
+   ports:
+     - 18000:8000
+     - 18089:8089 # REST API
+     - 8088:8088  # HEC
+     - 514:514    # syslog
+ deploy:
+   image: splunk/splunk:latest
+   platform: linux/amd64
+   hostname: deploy
+   environment:
+     - TZ=Asia/Tokyo
+     - SPLUNK_START_ARGS=--accept-license
+     - SPLUNK_PASSWORD=TestPass123#
+     - SPLUNK_ROLE=splunk_deployment_server
+   ports:
+     - 28000:8000
+     - 28089:8089  # API and Deployment
+ index-01:
+   image: splunk/splunk:latest
+   platform: linux/amd64
+   hostname: index-01
+   environment:
+     - TZ=Asia/Tokyo
+     - SPLUNK_START_ARGS=--accept-license
+     - SPLUNK_PASSWORD=TestPass123#
+     - SPLUNK_CLUSTER_MASTER_URL=cmaster
+     - SPLUNK_ENABLE_LISTEN=9997
+     - SPLUNK_IDXC_PASS4SYMMKEY=SYMMKEY123#
+     - SPLUNK_ROLE=splunk_indexer
+   ports:
+     - 38000:8000
+     - 19997:9997 # index
+ index-02:
+   image: splunk/splunk:latest
+   platform: linux/amd64
+   hostname: index-02
+   environment:
+     - TZ=Asia/Tokyo
+     - SPLUNK_START_ARGS=--accept-license
+     - SPLUNK_PASSWORD=TestPass123#
+     - SPLUNK_CLUSTER_MASTER_URL=cmaster
+     - SPLUNK_ENABLE_LISTEN=9997
+     - SPLUNK_IDXC_PASS4SYMMKEY=SYMMKEY123#
+     - SPLUNK_ROLE=splunk_indexer
+   ports:
+     - 48000:8000
+     - 29997:9997
+ index-03:
+   image: splunk/splunk:latest
+   platform: linux/amd64
+   hostname: index-03
+   environment:
+     - TZ=Asia/Tokyo
+     - SPLUNK_START_ARGS=--accept-license
+     - SPLUNK_PASSWORD=TestPass123#
+     - SPLUNK_CLUSTER_MASTER_URL=cmaster
+     - SPLUNK_ENABLE_LISTEN=9997
+     - SPLUNK_IDXC_PASS4SYMMKEY=SYMMKEY123#
+     - SPLUNK_ROLE=splunk_indexer
+   ports:
+     - 58000:8000
+     - 39997:9997
+
