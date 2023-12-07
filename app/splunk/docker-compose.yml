@@ -2,7 +2,7 @@
 services:
  splunk:
    image: splunk/splunk:latest
-   platform: linux/amd64 
+   platform: linux/amd64
    stdin_open: true  # docker run -i
    tty: true         # docker run -t
    environment:
