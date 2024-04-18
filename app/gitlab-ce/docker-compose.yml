@@ -1,6 +1,7 @@
 ---
 services:
- fedora:
+ gitlab:
    image: gitlab-ce
+   hostname: gitlab
    stdin_open: true  # docker run -i
    tty: true         # docker run -t
