@@ -1,0 +1,6 @@
+---
+services:
+ centos-stream9:
+   image: quay.io/centos/centos:stream9
+   stdin_open: true  # docker run -i
+   tty: true         # docker run -t
