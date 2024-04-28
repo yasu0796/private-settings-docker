@@ -1,0 +1,6 @@
+---
+services:
+ ol9:
+   image: oraclelinux:9
+   stdin_open: true  # docker run -i
+   tty: true         # docker run -t
