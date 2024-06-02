@@ -1,4 +1,4 @@
-FROM fedora:39
+FROM fedora:40
 RUN rpm --import https://packages.microsoft.com/keys/microsoft.asc
 COPY vscode.repo /etc/yum.repos.d/vscode.repo
 RUN dnf upgrade -y && dnf -y install git glibc-langpack-ja code
