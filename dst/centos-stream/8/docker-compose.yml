@@ -1,6 +1,0 @@
----
-services:
- centos-stream8:
-   image: quay.io/centos/centos:stream8
-   stdin_open: true  # docker run -i
-   tty: true         # docker run -t
