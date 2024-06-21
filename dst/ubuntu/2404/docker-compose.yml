@@ -1,6 +1,6 @@
 ---
 services:
- ubuntu2204:
+ ubuntu2404:
    image: ubuntu:24.04
    stdin_open: true  # docker run -i
    tty: true         # docker run -t
