@@ -1,1 +1,1 @@
-docker builder prune
+docker system df

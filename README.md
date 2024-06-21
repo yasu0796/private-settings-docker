@@ -8,7 +8,7 @@
 
 AMD64, ARM64 are supported.
 
-- CentOS Stream 8, 9
+- CentOS Stream 9
 - Debian 11, 12
 - Fedora (Latest : 40)
 - Oracle Linux 9
@@ -19,6 +19,7 @@ AMD64, ARM64 are supported.
 ### for Common use
 
 - Wordpress
+- RabbitMQ
 
 ### for Apple Silicon, Linux Server
 
@@ -31,4 +32,11 @@ AMD64 only, so you need Rosetta.
 
 AMD64, ARM64 are supported.
 
-- code-server
+- vscode
+
+## Scripts
+
+```bash
+docker system df
+docker builder prune
+```
