@@ -7,7 +7,7 @@ Add cahce in DNF
 ```dockerfile
 RUN --mount=type=cache,target=/var/cache/dnf \
 --mount=type=cache,target=/var/lib/dnf \
-dnf -y update && ～～
+dnf -y upgrade && ～～
 ```
 
 Result
