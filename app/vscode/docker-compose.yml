@@ -3,7 +3,7 @@ services:
  vscode:
    build:
      dockerfile: Dockerfile
-   command: code serve-web --user-data-dir=/root/vscode
+   command: code serve-web --user-data-dir=/root/vscode --host=localhost
    ports:
      - 8000:8000
    network_mode: "host"
