@@ -1,6 +1,6 @@
 ---
 services:
  fedora:
-   image: fedora:40
+   image: fedora:41
    stdin_open: true  # docker run -i
    tty: true         # docker run -t
