@@ -8,7 +8,7 @@
 
 AMD64, ARM64 are supported.
 
-- CentOS Stream 9
+- CentOS Stream 9, 10
 - Debian 12
 - Fedora (Latest : 41)
 - Oracle Linux 9
