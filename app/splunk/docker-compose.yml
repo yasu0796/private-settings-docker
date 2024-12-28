@@ -1,12 +1,12 @@
 ---
 services:
  splunk:
-   image: splunk/splunk:latest
-   platform: linux/amd64
-   stdin_open: true  # docker run -i
-   tty: true         # docker run -t
-   environment:
-     - SPLUNK_START_ARGS=--accept-license
-     - SPLUNK_PASSWORD=TestPass123#
-   ports:
-     - 8000:8000
+  image: splunk/splunk:latest
+  platform: linux/amd64
+  stdin_open: true  # docker run -i
+  tty: true         # docker run -t
+  environment:
+   - SPLUNK_START_ARGS=--accept-license
+   - SPLUNK_PASSWORD=TestPass123#
+  ports:
+   - 8000:8000

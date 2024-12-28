@@ -1,7 +1,0 @@
----
-services:
- gitlab:
-   image: gitlab/gitlab-ce:latest
-   hostname: gitlab
-   stdin_open: true  # docker run -i
-   tty: true         # docker run -t

@@ -1,9 +1,9 @@
 ---
 services:
  haproxy:
-   image: haproxy:2.4
-   ports:
-     - 8080:8080
-     - 10089:10089
-   volumes:
-     - ./config/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
+  image: haproxy:2.4
+  ports:
+   - 8080:8080
+   - 10089:10089
+  volumes:
+   - ./config/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg

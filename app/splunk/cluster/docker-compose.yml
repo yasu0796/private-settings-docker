@@ -31,9 +31,9 @@ services:
      - SPLUNK_ROLE=splunk_cluster_master
    ports:
      - 18000:8000
-     - 18089:8089 # REST API
-     - 8088:8088  # HEC
-     - 514:514    # syslog
+     - 18089:8089  # REST API
+     - 8088:8088   # HEC
+     - 514:514     # syslog
  deploy:
    image: splunk/splunk:latest
    platform: linux/amd64
@@ -60,7 +60,7 @@ services:
      - SPLUNK_ROLE=splunk_indexer
    ports:
      - 38000:8000
-     - 19997:9997 # index
+     - 19997:9997  # index
  index-02:
    image: splunk/splunk:latest
    platform: linux/amd64
@@ -91,4 +91,3 @@ services:
    ports:
      - 58000:8000
      - 39997:9997
-

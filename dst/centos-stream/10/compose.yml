@@ -1,6 +1,6 @@
 ---
 services:
  centos-stream10:
-    image: quay.io/centos/centos:stream10
-    stdin_open: true  # docker run -i
-    tty: true         # docker run -t
+  image: quay.io/centos/centos:stream10
+  stdin_open: true  # docker run -i
+  tty: true         # docker run -t

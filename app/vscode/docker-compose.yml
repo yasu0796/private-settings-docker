@@ -1,11 +1,11 @@
 ---
 services:
  vscode:
-   build:
-     dockerfile: Dockerfile
-   command: code serve-web --user-data-dir=/root/vscode --host=127.0.0.1
-   ports:
-     - 8000:8000
-   network_mode: "host"
-   volumes:
-     - /home/yasu0796:/workspace
+  build:
+   dockerfile: Dockerfile
+  command: code serve-web --user-data-dir=/root/vscode --host=127.0.0.1
+  ports:
+   - 8000:8000
+  network_mode: "host"
+  volumes:
+   - /home/yasu0796:/workspace
