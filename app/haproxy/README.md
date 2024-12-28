@@ -13,3 +13,4 @@
 - 2.4 : Ubuntu 22.04, RHEL 9
 - 2.6 : Debian 12
 - 2.8 : Ubuntu 24.04
+- 3.0 : CentOS Stream 10
