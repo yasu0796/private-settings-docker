@@ -3,6 +3,7 @@ services:
  mecab:
    build:
      dockerfile: Dockerfile
+   platform: linux/amd64
    command: mecab
    stdin_open: true  # docker run -i
    tty: true         # docker run -t
