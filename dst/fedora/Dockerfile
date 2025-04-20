@@ -1,7 +1,7 @@
-# docker build ./ -t myfedora:41
-# docker run -d --rm -ti --name fedora myfedora:41
+# docker build ./ -t myfedora:42
+# docker run -d --rm -ti --name fedora myfedora:42
 
-FROM fedora:41
+FROM fedora:42
 RUN \
 --mount=type=cache,target=/var/cache/dnf \
 --mount=type=cache,target=/var/lib/dnf \
