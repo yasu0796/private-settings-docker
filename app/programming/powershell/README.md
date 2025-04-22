@@ -30,3 +30,5 @@ AMD64, ARM64 are supported.
 `8.0` is the as same as `8.0-bookworm-slim`.
 
 `8.0-alpine` is the smallest image.
+
+But `8.0-alpine` ARM image does not contain pwsh. (AMD64 is no problem)
