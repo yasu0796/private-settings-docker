@@ -1,0 +1,7 @@
+---
+services:
+ powershell:
+  image: mcr.microsoft.com/dotnet/sdk:8.0-alpine
+  command: pwsh /scripts/test.ps1
+  volumes:
+   - ./scripts:/scripts:ro
