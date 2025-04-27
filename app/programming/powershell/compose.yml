@@ -6,3 +6,8 @@ services:
   volumes:
    - ./scripts:/scripts:ro
   working_dir: /scripts
+networks:
+ default:
+  ipam:
+   config:
+    - subnet: 10.255.248.136/29

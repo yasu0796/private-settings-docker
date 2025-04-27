@@ -4,3 +4,8 @@ services:
   image: quay.io/centos/centos:stream10
   stdin_open: true  # docker run -i
   tty: true         # docker run -t
+networks:
+ default:
+  ipam:
+   config:
+    - subnet: 10.255.154.80/29

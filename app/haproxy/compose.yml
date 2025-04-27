@@ -7,3 +7,8 @@ services:
    - 10089:10089
   volumes:
    - ./config/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
+networks:
+ default:
+  ipam:
+   config:
+    - subnet: 10.255.37.32/29

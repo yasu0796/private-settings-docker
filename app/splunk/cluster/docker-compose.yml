@@ -91,3 +91,8 @@ services:
    ports:
      - 58000:8000
      - 39997:9997
+networks:
+ default:
+  ipam:
+   config:
+    - subnet: 10.255.17.16/28

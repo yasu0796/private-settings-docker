@@ -10,3 +10,8 @@ services:
    - SPLUNK_PASSWORD=TestPass123#
   ports:
    - 8000:8000
+networks:
+ default:
+  ipam:
+   config:
+    - subnet: 10.255.69.136/29

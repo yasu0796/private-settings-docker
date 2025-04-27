@@ -4,3 +4,8 @@ services:
   image: oraclelinux:9
   stdin_open: true  # docker run -i
   tty: true         # docker run -t
+networks:
+ default:
+  ipam:
+   config:
+    - subnet: 10.255.136.80/29

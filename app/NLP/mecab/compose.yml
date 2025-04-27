@@ -7,3 +7,8 @@ services:
   command: mecab
   stdin_open: true  # docker run -i
   tty: true         # docker run -t
+networks:
+ default:
+  ipam:
+   config:
+    - subnet: 10.255.151.32/29
