@@ -1,0 +1,11 @@
+---
+services:
+ ol10:
+  image: oraclelinux:10
+  stdin_open: true  # docker run -i
+  tty: true         # docker run -t
+networks:
+ default:
+  ipam:
+   config:
+    - subnet: 10.255.95.184/29
