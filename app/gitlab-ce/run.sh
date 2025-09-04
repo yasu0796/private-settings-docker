@@ -7,6 +7,5 @@ docker run --detach \
   --name gitlab \
   --restart always \
   --shm-size 256m \
-   --platform  linux/amd64  \
   gitlab/gitlab-ce:latest
 #docker exec gitlab cat /etc/gitlab/initial_root_password
