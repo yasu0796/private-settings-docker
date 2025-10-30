@@ -1,4 +1,4 @@
-FROM fedora:42
+FROM quay.io/fedora/fedora:43
 RUN rpm --import https://packages.microsoft.com/keys/microsoft.asc
 COPY vscode.repo /etc/yum.repos.d/vscode.repo
 RUN \

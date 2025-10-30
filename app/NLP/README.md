@@ -6,7 +6,7 @@ Mecab, Juman are distribution's package.
 
 - [MeCab: Yet Another Part-of-Speech and Morphological Analyzer](https://taku910.github.io/mecab/)
 
-### Example of CentOS Stream 9 / 10, Fedora 42
+### Example of CentOS Stream 9 / 10, Fedora 43
 
 ```bash
 dnf install mecab mecab-ipadic
@@ -34,7 +34,7 @@ ipadic
 
 ## Juman
 
-CentOS Stream 9 / 10, Fedora 42 is not conatin Juman.
+CentOS Stream 9 / 10, Fedora 43 is not conatin Juman.
 
 ### Example of Ubuntu 24.04
 

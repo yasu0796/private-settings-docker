@@ -1,7 +1,7 @@
 ---
 services:
  fedora:
-  image: fedora:42
+  image: quay.io/fedora/fedora:43
   stdin_open: true  # docker run -i
   tty: true         # docker run -t
 networks:

@@ -1,6 +1,7 @@
 # Fedora
 
 - [fedora - Official Image | Docker Hub](https://hub.docker.com/_/fedora)
+- [fedora/fedora · Quay](https://quay.io/repository/fedora/fedora)
 
 ## Merit of cache
 
