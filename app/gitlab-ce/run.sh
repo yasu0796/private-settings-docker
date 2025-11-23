@@ -1,3 +1,4 @@
+#!/bin/sh
 docker run --detach \
   --hostname gitlab.example.com \
   --publish 443:443 --publish 80:80 --publish 22022:22 \
