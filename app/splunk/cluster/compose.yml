@@ -6,6 +6,7 @@ services:
    hostname: search
    environment:
      - TZ=Asia/Tokyo
+     - SPLUNK_GENERAL_TERMS=--accept-sgt-current-at-splunk-com
      - SPLUNK_START_ARGS=--accept-license
      - SPLUNK_PASSWORD=TestPass123#
      - SPLUNK_DEPLOYMENT_SERVER=deploy
@@ -21,6 +22,7 @@ services:
    hostname: cmaster
    environment:
      - TZ=Asia/Tokyo
+     - SPLUNK_GENERAL_TERMS=--accept-sgt-current-at-splunk-com
      - SPLUNK_START_ARGS=--accept-license
      - SPLUNK_PASSWORD=TestPass123#
      - SPLUNK_DEPLOYMENT_SERVER=deploy
@@ -40,6 +42,7 @@ services:
    hostname: deploy
    environment:
      - TZ=Asia/Tokyo
+     - SPLUNK_GENERAL_TERMS=--accept-sgt-current-at-splunk-com
      - SPLUNK_START_ARGS=--accept-license
      - SPLUNK_PASSWORD=TestPass123#
      - SPLUNK_ROLE=splunk_deployment_server
@@ -52,6 +55,7 @@ services:
    hostname: index-01
    environment:
      - TZ=Asia/Tokyo
+     - SPLUNK_GENERAL_TERMS=--accept-sgt-current-at-splunk-com
      - SPLUNK_START_ARGS=--accept-license
      - SPLUNK_PASSWORD=TestPass123#
      - SPLUNK_CLUSTER_MASTER_URL=cmaster
@@ -67,6 +71,7 @@ services:
    hostname: index-02
    environment:
      - TZ=Asia/Tokyo
+     - SPLUNK_GENERAL_TERMS=--accept-sgt-current-at-splunk-com
      - SPLUNK_START_ARGS=--accept-license
      - SPLUNK_PASSWORD=TestPass123#
      - SPLUNK_CLUSTER_MASTER_URL=cmaster
@@ -82,6 +87,7 @@ services:
    hostname: index-03
    environment:
      - TZ=Asia/Tokyo
+     - SPLUNK_GENERAL_TERMS=--accept-sgt-current-at-splunk-com
      - SPLUNK_START_ARGS=--accept-license
      - SPLUNK_PASSWORD=TestPass123#
      - SPLUNK_CLUSTER_MASTER_URL=cmaster

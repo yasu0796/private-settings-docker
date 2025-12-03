@@ -6,6 +6,7 @@ services:
   stdin_open: true  # docker run -i
   tty: true         # docker run -t
   environment:
+   - SPLUNK_GENERAL_TERMS=--accept-sgt-current-at-splunk-com
    - SPLUNK_START_ARGS=--accept-license
    - SPLUNK_PASSWORD=TestPass123#
   ports:
