@@ -10,7 +10,10 @@ services:
    - SPLUNK_START_ARGS=--accept-license
    - SPLUNK_PASSWORD=TestPass123#
   ports:
-   - 8000:8000
+   - 8000:8000  # Web
+   - 8088:8088  # HEC
+   - 8089:8089  # REST API
+   - 9997:9997  # Index
 networks:
  default:
   ipam:
