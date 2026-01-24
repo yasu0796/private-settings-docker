@@ -3,7 +3,7 @@ services:
   wordpress:
     depends_on:
       - db
-    image: wordpress:php8.3
+    image: wordpress:php8.5
     restart: always
     ports:
       - 8081:80
@@ -13,7 +13,7 @@ services:
       WORDPRESS_DB_PASSWORD: examplepass
       WORDPRESS_DB_NAME: exampledb
   db:
-    image: mysql:8.0-oracle
+    image: mysql:8.4-oracle
     restart: always
     environment:
       MYSQL_DATABASE: exampledb
