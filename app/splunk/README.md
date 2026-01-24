@@ -11,6 +11,8 @@
 
 Only AMD64
 
+9.3+ may not support emulation AMD64
+
 - [Deprecated and removed in version 9.3 - Splunk Documentation](https://docs.splunk.com/Documentation/Splunk/9.3.0/ReleaseNotes/Deprecatedfeatures#Deprecated_CPU_architectures)
 
 > ### Deprecated CPU architectures
