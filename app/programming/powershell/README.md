@@ -1,4 +1,4 @@
-# PoserShell
+# PowerShell
 
 - [Microsoft Artifact Registry](https://mcr.microsoft.com/en-us/artifact/mar/dotnet/sdk/about)
 - [dotnet-docker/README.sdk.md at main · dotnet/dotnet-docker](https://github.com/dotnet/dotnet-docker/blob/main/README.sdk.md)
@@ -15,7 +15,7 @@ AMD64, ARM64 are supported.
 
 8 is LTS, 9 is STS.
 
-10 is preview version and will become LTS.
+10 is GA, but the bundled PowerShell is still a `7.6.0-preview.4`.
 
 ## Images
 
@@ -27,7 +27,7 @@ AMD64, ARM64 are supported.
 | 8.0-alpine             | 66475da93b00     | 2025/04/09   | 688MB   |
 | 8.0-noble              | 031252393dd7     | 2025/04/09   | 822MB   |
 
-`8.0` is the as same as `8.0-bookworm-slim`.
+`8.0` is the same as `8.0-bookworm-slim`.
 
 `8.0-alpine` is the smallest image.
 
