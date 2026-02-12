@@ -9,4 +9,4 @@ networks:
  default:
   ipam:
    config:
-    - subnet: 10.255.230.64/29
+    - subnet: 10.255.82.96/29
