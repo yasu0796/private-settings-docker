@@ -5,10 +5,10 @@
 
 ## Merit of cache
 
-Add cahce in DNF
+Add cache in DNF
 
 ```dockerfile
-RUN --mount=type=cache,target=/var/cache/dnf \
+RUN --mount=type=cache,target=/var/cache/libdnf5 \
 --mount=type=cache,target=/var/lib/dnf \
 dnf -y upgrade && ～～
 ```
@@ -17,8 +17,8 @@ Result
 
 ```
 # docker images
-REPOSITORY   TAG          IMAGE ID       CREATED              SIZE
-myfedora     40-cache     92e7e2705c65   21 seconds ago       444MB
-myfedora     40           596a91820b82   About a minute ago   529MB
-fedora       40           5e22da79803c   3 months ago         222MB
+IMAGE                      ID             DISK USAGE   CONTENT SIZE   EXTRA
+myfedora:43-cache          c7885332775f        529MB          122MB        
+myfedora:43-nocache        3958f27c545e        684MB          185MB        
+quay.io/fedora/fedora:43   3f4c89774b10        275MB           67MB     
 ```
