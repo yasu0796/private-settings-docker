@@ -3,6 +3,8 @@ services:
  vscode:
   build:
    dockerfile: Dockerfile
+   additional_contexts:
+    certs: ../../certs/
   command: code serve-web --server-data-dir=/root/.vscode --host=127.0.0.1
   ports:
    - 8000:8000

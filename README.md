@@ -46,9 +46,6 @@ Using the script below, allocate a /29 network from within 10.10.255.0/16.
 python scripts/assist_network.py dst/ubuntu/2404
 ```
 
-## Scripts
+## Cloudflare
 
-```bash
-docker system df
-docker builder prune
-```
+Copy `certificate.pem` in `certs` directory.

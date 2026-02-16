@@ -1,0 +1,19 @@
+---
+services:
+ gemini:
+  build:
+   dockerfile: Dockerfile
+   additional_contexts:
+    certs: ../../../certs/
+  stdin_open: true  # docker run -i
+  tty: true         # docker run -t
+  env_file:
+    - ./gemini_api_key.txt
+  volumes:
+    - ./workspace:/workspace
+  working_dir: /workspace
+networks:
+ default:
+  ipam:
+   config:
+    - subnet: 10.255.200.144/29
