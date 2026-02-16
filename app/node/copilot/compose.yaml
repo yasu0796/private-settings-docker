@@ -1,0 +1,18 @@
+---
+services:
+ copilot:
+  build:
+   dockerfile: Dockerfile
+   additional_contexts:
+    certs: ../../../certs/
+  stdin_open: true  # docker run -i
+  tty: true         # docker run -t
+  volumes:
+    - ./workspace:/workspace
+    - ./.copilot/config.json:/root/.copilot/config.json
+  working_dir: /workspace
+networks:
+ default:
+  ipam:
+   config:
+    - subnet: 10.255.38.208/29
