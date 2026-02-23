@@ -7,4 +7,4 @@
 
 ## Comment
 
-If you use WordPress 6.6+, you can use MySQL 8.3 LTS.
+If you use WordPress 6.6+, you can use MySQL 8.4 LTS.
