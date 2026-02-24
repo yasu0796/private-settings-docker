@@ -3,8 +3,14 @@ services:
  gitlab:
   image: gitlab/gitlab-ce:latest
   hostname: gitlab
-  stdin_open: true  # docker run -i
-  tty: true         # docker run -t
+  environment:
+    GITLAB_OMNIBUS_CONFIG: |
+      external_url 'http://localhost:8888'
+      gitlab_rails['gitlab_shell_ssh_port'] = 20022
+  ports:
+   - 8888:8888
+   - 20022:22
+  shm_size: '256m'
 networks:
  default:
   ipam:
