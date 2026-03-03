@@ -1,0 +1,18 @@
+---
+services:
+ opencode:
+  build:
+   dockerfile: Dockerfile
+   additional_contexts:
+    certs: ../../../certs/
+  stdin_open: true  # docker run -i
+  tty: true         # docker run -t
+  volumes:
+    - ./workspace:/workspace
+    - ./.local/auth.json:/root/.local/share/opencode/auth.json 
+  working_dir: /workspace
+networks:
+ default:
+  ipam:
+   config:
+    - subnet: 10.255.213.168/29
