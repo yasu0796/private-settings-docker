@@ -1,0 +1,17 @@
+---
+services:
+ python:
+  build:
+   dockerfile: Dockerfile
+   additional_contexts:
+    certs: ../../../certs/
+  # command: pip list
+  command: python ./sample.py
+  volumes:
+   - ./scripts:/scripts:ro
+  working_dir: /scripts
+networks:
+ default:
+  ipam:
+   config:
+    - subnet: 10.255.52.152/29
