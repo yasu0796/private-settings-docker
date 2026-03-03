@@ -1,0 +1,16 @@
+---
+services:
+ ruby:
+  build:
+   dockerfile: Dockerfile
+   additional_contexts:
+    certs: ../../../certs/
+  command: ruby ./sample.rb
+  volumes:
+   - ./scripts:/scripts:ro
+  working_dir: /scripts
+networks:
+ default:
+  ipam:
+   config:
+    - subnet: 10.255.173.144/29
