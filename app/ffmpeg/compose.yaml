@@ -1,0 +1,11 @@
+---
+services:
+ ffmpeg:
+  image: linuxserver/ffmpeg:latest
+  volumes:
+   - /mnt/chromeos/MyFiles:/MyFiles
+networks:
+ default:
+  ipam:
+   config:
+    - subnet: 10.255.200.48/29
