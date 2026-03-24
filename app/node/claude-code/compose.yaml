@@ -1,0 +1,21 @@
+---
+services:
+ claude-code:
+  build:
+   dockerfile: Dockerfile
+   additional_contexts:
+    certs: ../../../certs/
+  stdin_open: true  # docker run -i
+  tty: true         # docker run -t
+  env_file:
+    - ./claude.env
+  volumes:
+    - ./workspace:/workspace
+    - ./.claude/.credentials.json:/root/.claude/.credentials.json
+    - ./.claude/.claude.json:/root/.claude.json
+  working_dir: /workspace
+networks:
+ default:
+  ipam:
+   config:
+    - subnet: 10.255.245.184/29
