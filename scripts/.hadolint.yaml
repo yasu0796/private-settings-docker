@@ -2,4 +2,5 @@
 ignored:
   - DL3008  # Pin versions in apt-get install.
   - DL3016  # Pin versions in npm.
+  - DL3028  # Pin versions in gem install. Instead of gem install <gem> use gem install <gem>:<version>
   - DL3041  # Specify version with dnf install -y <package>-<version>
