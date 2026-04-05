@@ -1,7 +1,12 @@
 # VS Code serve-web
 
-- [Test: `serve-web` with the CLI · Issue #191542 · microsoft/vscode](https://github.com/microsoft/vscode/issues/191542)
 - [Running Visual Studio Code on Linux](https://code.visualstudio.com/docs/setup/linux)
+
+## Issue
+
+- [Error: Uncaught Error: !!! NLS MISSING: 16444 !!! when starting VS Code 1.110.0 in serve-web mode via the CLI · Issue #299425 · microsoft/vscode](https://github.com/microsoft/vscode/issues/299425)
+
+So set browser language to English instead of Japanese.
 
 ## Memo
 
