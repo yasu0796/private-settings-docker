@@ -6,29 +6,25 @@
 ## Basic Usage
 
 ```bash
-docker pull mcr.microsoft.com/dotnet/sdk:8.0
+docker pull mcr.microsoft.com/dotnet/sdk:10.0
 ```
 
 ## Version Information
 
 AMD64, ARM64 are supported.
 
-8 is LTS, 9 is STS.
-
-10 is GA, but the bundled PowerShell is still a `7.6.0-preview.4`.
-
 ## Images
 
 | TAG                    | IMAGE ID         | CREATED      | SIZE    |
 |------------------------|------------------|--------------|---------|
-| 8.0-azurelinux3.0      | 285dec1e05bf     | 2025/04/10   | 887MB   |
-| 8.0                    | b04296b830b1     | 2025/04/09   | 836MB   |
-| 8.0-bookworm-slim      | b04296b830b1     | 2025/04/09   | 836MB   |
-| 8.0-alpine             | 66475da93b00     | 2025/04/09   | 688MB   |
-| 8.0-noble              | 031252393dd7     | 2025/04/09   | 822MB   |
+| 10.0                   | 8a90a473da52     | 2026/04/23   | 1.3GB   |
+| 10.0-noble             | 8a90a473da52     | 2026/04/23   | 1.3GB   |
+| 10.0-azurelinux3.0     | 4f08dbd55f00     | 2026/04/23   | 1.36GB  |
+| 10.0-resolute          | ac75136590a2     | 2026/04/23   | 1.36GB  |
+| 10.0-alpine            | 0191ff386e93     | 2026/04/23   | 1.01GB  |
 
-`8.0` is the same as `8.0-bookworm-slim`.
+`10.0` is the same as `10.0-noble`.
 
-`8.0-alpine` is the smallest image.
+`10.0-alpine` is the smallest image.
 
-But `8.0-alpine` ARM image does not contain pwsh. (AMD64 is no problem)
+But `10.0-alpine` ARM image does not contain pwsh. (AMD64 is no problem)
