@@ -1,0 +1,11 @@
+---
+services:
+ ubuntu2604:
+  image: ubuntu:26.04
+  stdin_open: true  # docker run -i
+  tty: true         # docker run -t
+networks:
+ default:
+  ipam:
+   config:
+    - subnet: 10.255.183.216/29
