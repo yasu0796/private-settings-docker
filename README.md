@@ -4,7 +4,7 @@
 
 ## Other Repositories
 
-- [yasu0796/zabbix-docker: Official Zabbix Dockerfiles (under development, not ready for production)](https://github.com/yasu0796/zabbix-docker)
+- [zabbix/zabbix-docker: Official Zabbix Dockerfiles](https://github.com/zabbix/zabbix-docker)
 
 ## Distribution
 
