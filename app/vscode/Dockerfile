@@ -1,4 +1,4 @@
-FROM quay.io/fedora/fedora:43
+FROM quay.io/fedora/fedora:44
 
 COPY --from=certs certificate.pem /etc/pki/ca-trust/source/anchors/certificate.crt
 ENV NODE_EXTRA_CA_CERTS=/etc/pki/ca-trust/source/anchors/certificate.crt

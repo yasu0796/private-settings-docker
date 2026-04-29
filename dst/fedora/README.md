@@ -5,6 +5,8 @@
 
 ## Merit of cache
 
+- [Caching — dnf5 documentation](https://dnf5.readthedocs.io/en/stable/misc/caching.7.html)
+
 Add cache in DNF
 
 ```dockerfile
@@ -18,7 +20,7 @@ Result
 ```
 # docker images
 IMAGE                      ID             DISK USAGE   CONTENT SIZE   EXTRA
-myfedora:43-cache          c7885332775f        529MB          122MB        
-myfedora:43-nocache        3958f27c545e        684MB          185MB        
-quay.io/fedora/fedora:43   3f4c89774b10        275MB           67MB     
+myfedora:44-cache          a09305683a73        515MB          128MB        
+myfedora:44-nocache        e419616f0356        655MB          187MB        
+quay.io/fedora/fedora:44   3de521d4e5fd        264MB         71.4MB     
 ```

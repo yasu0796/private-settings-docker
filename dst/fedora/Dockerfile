@@ -1,7 +1,7 @@
-# docker build ./ -t myfedora:43
-# docker run -d --rm -ti --name fedora myfedora:43
+# docker build ./ -t myfedora:44
+# docker run -d --rm -ti --name fedora myfedora:44
 
-FROM quay.io/fedora/fedora:43
+FROM quay.io/fedora/fedora:44
 RUN \
 --mount=type=cache,target=/var/cache/libdnf5 \
 --mount=type=cache,target=/var/lib/dnf \
