@@ -1,0 +1,11 @@
+---
+services:
+ rust:
+  image: rust:latest
+  stdin_open: true  # docker run -i
+  tty: true         # docker run -t
+networks:
+ default:
+  ipam:
+   config:
+    - subnet: 10.255.82.96/29
