@@ -1,0 +1,21 @@
+---
+services:
+ claw-code:
+  build:
+   dockerfile: Dockerfile
+   additional_contexts:
+    certs: ../../../certs/
+  stdin_open: true  # docker run -i
+  tty: true         # docker run -t
+  env_file:
+  - ./claw-code.env
+  # command: /claw-code/rust/target/debug/claw --model "openai/gpt-oss-120b:free"
+  volumes:
+  - ./workspace:/workspace
+  working_dir: /workspace
+networks:
+ default:
+  enable_ipv6: true
+  ipam:
+   config:
+    - subnet: 10.255.88.136/29
