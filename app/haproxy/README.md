@@ -14,3 +14,4 @@
 - 2.6 : Debian 12
 - 2.8 : Ubuntu 24.04
 - 3.0 : CentOS Stream 10
+- 3.2 : Ubuntu 26.04
