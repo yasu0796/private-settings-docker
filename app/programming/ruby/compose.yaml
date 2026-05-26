@@ -11,6 +11,7 @@ services:
   working_dir: /scripts
 networks:
  default:
+  enable_ipv6: true
   ipam:
    config:
     - subnet: 10.255.173.144/29

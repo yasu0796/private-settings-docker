@@ -99,6 +99,7 @@ services:
      - 39997:9997
 networks:
  default:
+  enable_ipv6: true
   ipam:
    config:
     - subnet: 10.255.17.16/28

@@ -9,6 +9,7 @@ services:
    - ./config/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
 networks:
  default:
+  enable_ipv6: true
   ipam:
    config:
     - subnet: 10.255.37.32/29

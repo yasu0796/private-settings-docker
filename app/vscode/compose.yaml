@@ -13,6 +13,7 @@ services:
    - /home/yasu0796:/workspace
 networks:
  default:
+  enable_ipv6: true
   ipam:
    config:
     - subnet: 10.255.182.144/29

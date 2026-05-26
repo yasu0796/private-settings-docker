@@ -23,6 +23,7 @@ services:
       - MYSQL_RANDOM_ROOT_PASSWORD='1'
 networks:
  default:
+  enable_ipv6: true
   ipam:
    config:
     - subnet: 10.255.5.144/29

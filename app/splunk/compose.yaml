@@ -16,6 +16,7 @@ services:
    - 9997:9997  # Index
 networks:
  default:
+  enable_ipv6: true
   ipam:
    config:
     - subnet: 10.255.69.136/29

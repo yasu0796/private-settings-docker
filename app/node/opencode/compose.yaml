@@ -13,6 +13,7 @@ services:
   working_dir: /workspace
 networks:
  default:
+  enable_ipv6: true
   ipam:
    config:
     - subnet: 10.255.213.168/29

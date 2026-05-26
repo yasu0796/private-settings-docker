@@ -16,6 +16,7 @@ services:
     - ./.claude/.claude.json:/root/.claude.json
 networks:
  default:
+  enable_ipv6: true
   ipam:
    config:
     - subnet: 10.255.190.168/29
