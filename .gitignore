@@ -1,8 +1,14 @@
 app/node/claude-code/claude.env
 app/node/claude-code/.claude/.claude.json
 app/node/claude-code/.claude/.credentials.json
+app/node/claude-code/workspace/*
+!app/node/claude-code/workspace/.gitkeep
 app/node/copilot/.copilot/config.json
+app/node/copilot/workspace/*
+!app/node/copilot/workspace/.gitkeep
 app/node/gemini-cli/gemini_api_key.env
+app/node/nanoclaw/workspace/*
+!app/node/nanoclaw/workspace/.gitkeep
 app/node/opencode/workspace/*
 !app/node/opencode/workspace/.gitkeep
 app/rust/claw-code/claw-code.env
