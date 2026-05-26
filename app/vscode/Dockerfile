@@ -9,7 +9,7 @@ COPY files/vscode.repo /etc/yum.repos.d/vscode.repo
 RUN \
   --mount=type=cache,target=/var/cache/libdnf5 \
   --mount=type=cache,target=/var/lib/dnf \
-  dnf upgrade -y && dnf -y install git glibc-langpack-ja code hadolint
+  dnf upgrade -y && dnf -y install code git glibc-langpack-ja hadolint ShellCheck
 
 RUN code --no-sandbox --user-data-dir=/root/vscode --locale ja \
   --install-extension ms-ceintl.vscode-language-pack-ja \
