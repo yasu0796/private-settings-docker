@@ -11,6 +11,8 @@ services:
   network_mode: "host"
   volumes:
    - /home/yasu0796:/workspace
+#   - /root:/workspace
+#   - /mnt/vdb:/workspace
 networks:
  default:
   enable_ipv6: true
