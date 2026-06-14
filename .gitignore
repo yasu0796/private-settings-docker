@@ -1,3 +1,4 @@
+app/ai/open-webui/open-webui.env
 app/node/claude-code/claude.env
 app/node/claude-code/.claude/.claude.json
 app/node/claude-code/.claude/.credentials.json

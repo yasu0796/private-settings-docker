@@ -1,0 +1,33 @@
+---
+services:
+ server:
+  image: openwebui/open-webui:0.9
+  ports:
+   - 8081:8080
+  env_file:
+   - ./open-webui.env
+  volumes:
+    - open-webui:/app/backend/data
+ cuda:
+  image: openwebui/open-webui:0.9-cuda
+  platform: linux/amd64
+  ports:
+   - 8081:8080
+  env_file:
+   - ./open-webui.env
+  volumes:
+    - open-webui:/app/backend/data
+  deploy:
+   resources:
+    reservations:
+     devices:
+      - driver: nvidia
+        capabilities: [all]
+networks:
+ default:
+  enable_ipv6: true
+  ipam:
+   config:
+    - subnet: 10.255.48.232/29
+volumes:
+  open-webui: {}
