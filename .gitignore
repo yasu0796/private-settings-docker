@@ -17,4 +17,6 @@ app/node/opencode/workspace/*
 app/rust/claw-code/claw-code.env
 app/rust/claw-code/workspace/*
 !app/rust/claw-code/workspace/.gitkeep
+app/vscode/.vscode/*
+!app/vscode/.vscode/.gitkeep
 certs/certificate.pem

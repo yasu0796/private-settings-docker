@@ -11,6 +11,7 @@ services:
   network_mode: "host"
   volumes:
    - /home/yasu0796:/workspace
+   - ./.vscode:/root/.vscode
 #   - /root:/workspace
 #   - /mnt/vdb:/workspace
 networks:
