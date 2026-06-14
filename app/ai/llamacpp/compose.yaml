@@ -1,0 +1,61 @@
+---
+services:
+ server:
+  image: ghcr.io/ggml-org/llama.cpp:server
+  ports:
+   - 8080:8080
+  env_file:
+   - ./llama.env
+  volumes:
+   - ./models:/models
+ server-cuda13:
+  image: ghcr.io/ggml-org/llama.cpp:server-cuda13
+  platform: linux/amd64
+  ports:
+   - 8080:8080
+  env_file:
+   - ./llama.env
+  volumes:
+   - ./models:/models
+  deploy:
+   resources:
+    reservations:
+     devices:
+      - driver: nvidia
+        capabilities: [all]
+ server-cuda12:
+  image: ghcr.io/ggml-org/llama.cpp:server-cuda12
+  platform: linux/amd64
+  ports:
+   - 8080:8080
+  env_file:
+   - ./llama.env
+  volumes:
+   - ./models:/models
+  deploy:
+   resources:
+    reservations:
+     devices:
+      - driver: nvidia
+        capabilities: [all]
+ bench-cuda12:
+  image: ghcr.io/ggml-org/llama.cpp:full-cuda12
+  platform: linux/amd64
+  command: "--bench --version"
+  # command: ["--bench", "--progress", "-m", "/models/gemma-4-31B_q4_0-it.gguf"]
+  env_file:
+   - ./llama.env
+  volumes:
+   - ./models:/models
+  deploy:
+   resources:
+    reservations:
+     devices:
+      - driver: nvidia
+        capabilities: [all]
+networks:
+ default:
+  enable_ipv6: false
+  ipam:
+   config:
+    - subnet: 10.255.89.240/29
