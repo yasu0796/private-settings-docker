@@ -1,7 +1,7 @@
 ---
 services:
  runtime:
-  image: nvidia/cuda:13.2.1-runtime-ubuntu24.04
+  image: nvidia/cuda:13.3.0-runtime-ubuntu26.04
   command: nvidia-smi
   platform: linux/amd64
   network_mode: none
