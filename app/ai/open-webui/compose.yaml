@@ -1,7 +1,7 @@
 ---
 services:
  server:
-  image: openwebui/open-webui:0.9
+  image: openwebui/open-webui:latest-slim
   ports:
    - 8081:8080
   env_file:
@@ -9,7 +9,7 @@ services:
   volumes:
     - open-webui:/app/backend/data
  cuda:
-  image: openwebui/open-webui:0.9-cuda
+  image: openwebui/open-webui:latest-cuda
   platform: linux/amd64
   ports:
    - 8081:8080
