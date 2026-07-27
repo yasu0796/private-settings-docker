@@ -1,2 +1,2 @@
 #!/bin/sh
-find .. -type f -name 'Dockerfile*' -exec hadolint {} +
+find .. -name '.vscode' -prune -o -type f -name 'Dockerfile*' -exec hadolint {} +
