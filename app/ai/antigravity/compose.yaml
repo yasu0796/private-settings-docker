@@ -1,20 +1,19 @@
 ---
 services:
- gemini:
+ antigravity:
   build:
    dockerfile: Dockerfile
    additional_contexts:
     certs: ../../../certs/
   stdin_open: true  # docker run -i
   tty: true         # docker run -t
-  env_file:
-    - ./gemini_api_key.env
   volumes:
     - ./workspace:/workspace
+    - ./.antigravity-cli/antigravity-oauth-token:/root/.gemini/antigravity-cli/antigravity-oauth-token
   working_dir: /workspace
 networks:
  default:
   enable_ipv6: true
   ipam:
    config:
-    - subnet: 10.255.200.144/29
+    - subnet: 10.255.201.8/29
