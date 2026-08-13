@@ -22,7 +22,7 @@ services:
      - SPLUNK_GENERAL_TERMS=--accept-sgt-current-at-splunk-com
      - SPLUNK_START_ARGS=--accept-license
      - SPLUNK_PASSWORD=TestPass123#
-     - SPLUNK_DEPLOYMENT_SERVER=deploy
+     - SPLUNK_DEPLOYMENT_SERVER=standalone
 networks:
  default:
   enable_ipv6: true
