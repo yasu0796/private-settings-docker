@@ -21,3 +21,11 @@ Only AMD64
 > Support for the use of processors that do not meet this requirement will be removed in the next major or minor version of Splunk Enterprise after version 9.3.
 > 
 > This CPU requirement and the notice of deprecation does not apply to the Universal Forwarder package.
+
+### MongoDB
+
+- [System requirements for use of Splunk Enterprise on-premises | Splunk Enterprise](https://help.splunk.com/en/splunk-enterprise/get-started/install-and-upgrade/10.4/plan-your-splunk-enterprise-installation/system-requirements-for-use-of-splunk-enterprise-on-premises)
+
+Ubuntu 26.04 (Kernel 7.0) is not yet supported.
+
+> MongoDB cannot start: Linux kernel versions 6.19 and newer has a known incompatibility with this version of MongoDB. See https://jira.mongodb.org/browse/SERVER-121912 for more information. 
