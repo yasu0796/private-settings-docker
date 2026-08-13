@@ -1,0 +1,31 @@
+---
+services:
+ standalone:
+   image: splunk/splunk:latest
+   platform: linux/amd64
+   hostname: standalone
+   environment:
+     - TZ=Asia/Tokyo
+     - SPLUNK_GENERAL_TERMS=--accept-sgt-current-at-splunk-com
+     - SPLUNK_START_ARGS=--accept-license
+     - SPLUNK_PASSWORD=TestPass123#
+     - SPLUNK_ROLE=splunk_standalone
+   ports:
+     - 8000:8000  # Web
+     - 8089:8089  # REST API
+ uf-latest:
+   image: splunk/universalforwarder:latest
+   platform: linux/amd64
+   hostname: uf-latest
+   environment:
+     - TZ=Asia/Tokyo
+     - SPLUNK_GENERAL_TERMS=--accept-sgt-current-at-splunk-com
+     - SPLUNK_START_ARGS=--accept-license
+     - SPLUNK_PASSWORD=TestPass123#
+     - SPLUNK_DEPLOYMENT_SERVER=deploy
+networks:
+ default:
+  enable_ipv6: true
+  ipam:
+   config:
+    - subnet: 10.255.172.224/29
