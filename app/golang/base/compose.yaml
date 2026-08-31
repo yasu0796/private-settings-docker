@@ -1,0 +1,12 @@
+---
+services:
+ golang:
+  image: golang:latest
+  stdin_open: true  # docker run -i
+  tty: true         # docker run -t
+networks:
+ default:
+  enable_ipv6: true
+  ipam:
+   config:
+    - subnet: 10.255.145.192/29
