@@ -13,7 +13,7 @@ services:
       WORDPRESS_DB_PASSWORD: examplepass
       WORDPRESS_DB_NAME: exampledb
   db:
-    image: mysql:8.4-oracle
+    image: mysql:9.7-oracle
     restart: always
     environment:
       MYSQL_DATABASE: exampledb
