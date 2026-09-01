@@ -1,0 +1,9 @@
+FROM oraclelinux:9
+
+COPY certificate.pem /etc/pki/ca-trust/source/anchors/certificate.crt
+RUN update-ca-trust extract
+
+RUN \
+--mount=type=cache,target=/var/cache/libdnf5 \
+--mount=type=cache,target=/var/lib/dnf \
+dnf -y update && dnf -y install bind-utils iperf3 jq oracle-epel-release-el9 python3-pip traceroute wget whois systemd
