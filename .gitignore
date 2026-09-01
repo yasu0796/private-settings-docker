@@ -26,4 +26,4 @@ app/rust/claw-code/workspace/*
 !app/rust/claw-code/workspace/.gitkeep
 app/vscode/.vscode/*
 !app/vscode/.vscode/.gitkeep
-certs/certificate.pem
+certificate.pem
