@@ -1,0 +1,18 @@
+---
+services:
+  devstack:
+    build:
+     dockerfile: Dockerfile
+     additional_contexts:
+      certs: ../../../certs/
+    ports:
+      - 5000:5000
+    privileged: true  # for systemd
+    stdin_open: true  # docker run -i
+    tty: true         # docker run -t
+networks:
+ default:
+  enable_ipv6: true
+  ipam:
+   config:
+    - subnet: 10.255.26.56/29
