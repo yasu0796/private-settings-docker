@@ -1,6 +1,6 @@
 # container machine needs systemd
-# container image pull quay.io/fedora/fedora:44
-FROM quay.io/fedora/fedora:44
+# container image pull quay.io/fedora/fedora:45
+FROM quay.io/fedora/fedora:45
 
 COPY certificate.pem /etc/pki/ca-trust/source/anchors/certificate.crt
 RUN update-ca-trust extract
