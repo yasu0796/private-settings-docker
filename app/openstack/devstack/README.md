@@ -24,3 +24,10 @@ By default, the development version will be installed. If you want to change thi
 CentOS Stream 10 was first included in Tested Runtimes as of the 2025.2 release.
 
 - [Tested Runtimes for 2025.2 (Flamingo) — OpenStack Technical Committee Governance Documents](https://governance.openstack.org/tc/reference/runtimes/2025.2.html)
+
+
+If you get an error like `Please update your run_process stanza to have an absolute path.` in 2025.2, run the command below.
+
+```bash
+pip3 install uwsgi
+```
