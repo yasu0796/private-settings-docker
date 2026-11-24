@@ -4,8 +4,7 @@ services:
     build:
      dockerfile: Dockerfile
      args:
-      VERSION: master
-      # VERSION: stable/2025.2
+      VERSION: ${VERSION}
      additional_contexts:
       certs: ../../../certs/
     ports:
