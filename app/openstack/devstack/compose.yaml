@@ -3,6 +3,8 @@ services:
   devstack:
     build:
      dockerfile: Dockerfile
+     args:
+      VERSION: master
      additional_contexts:
       certs: ../../../certs/
     ports:
